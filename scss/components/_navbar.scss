@@ -1,0 +1,15 @@
+.navbar {
+    
+    .container-fluid {
+        background-color: $colorAma;
+        img {
+            width: 35px;
+            height: 35px;
+            // border: 0.5px solid #191919;
+        }
+    }
+    .navbar-brand{
+        font-family: "Brain";
+        font-size: 30px;
+    }
+}

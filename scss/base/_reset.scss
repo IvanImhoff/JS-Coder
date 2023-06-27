@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+// .btn-secundary{
+
+// }
+
+@font-face {
+    font-family: "Brain";
+    src: local("Brain"),
+    url(./../multimeia/fonts/Iron\ &\ Brine.ttf);
+}
+
+@font-face {
+    font-family: "Cocomat";
+    src: local("Cocomat"),
+    url(./../../multimeia/fonts/Cocomat\ Light-trial.ttf);
+}

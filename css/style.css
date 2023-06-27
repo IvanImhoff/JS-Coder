@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "Brain";
+  src: local("Brain"), url(./../multimeia/fonts/Iron\ &\ Brine.ttf);
+}
+@font-face {
+  font-family: "Cocomat";
+  src: local("Cocomat"), url(./../../multimeia/fonts/Cocomat\ Light-trial.ttf);
+}
+.btn-primary {
+  font-weight: bold;
+  letter-spacing: 3px;
+  background-color: #191919;
+  border-radius: 5px;
+  border: 1px solid #191919;
+}
+.btn-primary:hover {
+  background-color: #fdd41a;
+  border: 1px solid #191919;
+  color: #191919;
+}
+
+.navbar .container-fluid {
+  background-color: #fdd41a;
+}
+.navbar .container-fluid img {
+  width: 35px;
+  height: 35px;
+}
+.navbar .navbar-brand {
+  font-family: "Brain";
+  font-size: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.objetos_carro img {
+  width: 40px;
+  height: 40px;
+}
+
+.boton_cart {
+  margin-left: 10px;
+  border: 2px solid #191919;
+  border-radius: 5px;
+  height: 35px;
+  width: 35px;
+  background-color: #fdd41a;
+}
+.boton_cart :hover {
+  background-color: rgba(253, 211, 26, 0.8078431373);
+}
+
+main {
+  display: flex;
+}
+main #carro .objetos_carro {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main #carro .objetos_carro .borrarItem {
+  border: none;
+}
+main #carro p {
+  align-self: center;
+}
+main .totalCarro {
+  background-image: linear-gradient(#191919, #191919);
+  background-size: 50%;
+  background-position: 0 5%;
+  padding-left: 10px;
+}
+main .totalCarro h2 {
+  font-size: 25px;
+  color: #fff;
+  padding: 5px 0;
+}
+main .accordion {
+  width: 15vw;
+}
+main #button_prod {
+  height: 50px;
+  position: fixed;
+  top: 25vh;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  height: auto;
+  font-weight: bold;
+  letter-spacing: 3px;
+  background-color: #191919;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid #191919;
+}
+main #button_prod:hover {
+  background-color: #fdd41a;
+  border: 1px solid #191919;
+  font-weight: bold;
+}
+main .rigth {
+  width: 85vw;
+}
+main .rigth .row {
+  gap: 20px;
+}
+main .rigth .sarasa {
+  border: 1px solid #191919;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.575);
+  background-color: #191919;
+  color: #fff;
+}
+main .rigth .sarasa img {
+  object-fit: contain;
+  overflow: hidden;
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+}
+main .rigth .sarasa button {
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #fdd41a;
+  margin-bottom: 8px;
+}
+
+.accordion-button {
+  position: relative;
+  background-color: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
