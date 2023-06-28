@@ -40,6 +40,10 @@ a {
   width: 35px;
   height: 35px;
 }
+.navbar .container-fluid span {
+  font-family: "Cocomat";
+  font-weight: bold;
+}
 .navbar .navbar-brand {
   font-family: "Brain";
   font-size: 30px;
@@ -49,6 +53,20 @@ main {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.521), rgba(253, 253, 253, 0.466)), url(./../multimeia/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+}
+main .fondo {
+  width: 600px;
+  height: 600px;
+  border-radius: 5px;
+  position: absolute;
+  right: 10vw;
+  top: 25vh;
 }
 
 .objetos_carro img {
@@ -70,6 +88,17 @@ main {
 
 main {
   display: flex;
+}
+main .marcas {
+  height: auto;
+  background-color: #191919;
+  display: flex;
+  justify-content: space-between;
+}
+main .marcas img {
+  margin: 0 10px;
+  padding: 10px 0;
+  height: 50px;
 }
 main #carro .objetos_carro {
   display: flex;
@@ -121,14 +150,13 @@ main .rigth .row {
   gap: 20px;
 }
 main .rigth .sarasa {
-  border: 1px solid #191919;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.575);
-  background-color: #191919;
-  color: #fff;
+  background-color: rgba(255, 255, 255, 0.7725490196);
+  color: #000000;
 }
 main .rigth .sarasa img {
   object-fit: contain;

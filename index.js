@@ -289,7 +289,7 @@ let vaciarCarro = document.querySelector(`#vaciarCarro`)
 vaciarCarro.addEventListener(`click`, ()=>{
     localStorage.removeItem(`carro`)
     divCart.innerHTML = ``
-    carro = []
+    carro = [s]
 })
 
 console.log(carro)

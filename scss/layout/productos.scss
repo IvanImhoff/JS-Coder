@@ -21,6 +21,18 @@
 }
 
 main{
+    .marcas{
+        height: auto;
+        background-color: #191919;
+        display: flex;
+        justify-content: space-between;
+        img{
+            margin: 0    10px;
+            padding: 10px 0;
+            height: 50px;
+            // width: auto; 
+        }
+    }
     #carro {
     
         .objetos_carro{
@@ -101,14 +113,13 @@ main{
             // transition: 0.3s;
             // import
 
-            border: 1px solid #191919;
             border-radius: 10px;
             text-align: center;
             box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.7);
             -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.7);
             -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.575);  
-            background-color: #191919;
-            color: #fff;
+            background-color: #ffffffc5;
+            color: #000000;
 
 
             // display: flex;
