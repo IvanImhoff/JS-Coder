@@ -1,12 +1,12 @@
 class Tornillo {
     constructor (id, titulo, subRubro, grosor, precio, marca, imagen, cantidad){
-        this.id = id
+        this.id = id,
         this.name = titulo,
         this.subR = subRubro,
-        this.medida = grosor
-        this.costo = precio
-        this.marc = marca
-        this.img = imagen
+        this.medida = grosor,
+        this.costo = precio,
+        this.marc = marca,
+        this.img = imagen,
         this.cant = cantidad
     } 
     mostrarTorni(){
@@ -151,31 +151,6 @@ discos.push(disco1, disco2, disco3, disco4, disco5, disco6, disco7, disco8, disc
 const lijas = [lija1, lija2, lija3, lija4, lija5, lija6, lija7, lija8, lija9, lija10, lija11, lija12, lija13, lija14, lija15, lija16, lija17, lija18, lija19, lija20, lija21, lija22, lija23, lija24, lija25, lija26, lija27, lija28]
 let carro = []
 
-function saludo(){
-    let nameID = prompt("Ingrese su nombre.")
-    while (!isNaN(nameID)){
-        nameID = prompt(`Error, por favor. Vuelva a ingresarlo`)
-    }
-    alert(`Hola ${nameID}! A continuacion iremos listando nuestro productos en orfeta!`)
-    return nameID
-}
-
-function verCatalogo(){
-    let comprar = (prompt(`Desea ver nuestro catalogo de productos? Responder por si o no.`).toLocaleLowerCase())
-    while (comprar != "si" && comprar != "no"){
-        comprar = prompt(`Error, responda por si o por no.`)
-    }
-    comprando(comprar)
-}
-
-function mostrarSubto(){
-    if(totalCarro == undefined){
-        alert(`Tu carro esta vacio! Vuelve pronto`)
-    } else {
-        alert(`El total de tu carro es ${totalCarro}. Gracias por tu compra!`)
-    }
-}
-
 function encontrarId(array){
     option = parseInt(prompt(`Ingrese el ID del producto deseado, los mismos se muestran en consola.`))
     let busqueda = array.find(
@@ -189,14 +164,8 @@ function encontrarId(array){
     }
 }
 
-let totalCarro
-function sumarCostos (array){
-    let totalCarro = 0
-    for (let precio of array){
-        totalCarro += precio.costo
-    }
-    return totalCarro
-}   
+// let totalCarro
+
 
 function filtrarDesc(array){
     let datoBusqueda = prompt("Ingrese el valor por el cual quiere filtrar, ya sea material, medida o marca del producto.")
@@ -211,91 +180,45 @@ function filtrarDesc(array){
     }
 }
 
-function comprando(comprar){
-    let salirMenu = false
-    if (comprar.toLowerCase() == "si") {
-        do{
-            let opcionIngresada = parseInt(prompt(`Agregue al carrito los productos que desea comprar.
-                1 - Discos
-                2 - Tornillos tirafondo
-                3 - Tornillos autoperforantes para madera
-                4 - Lijas
-                5 - Filtrar discos
-                6 - Filtrar tornillos
-                7 - Filtrar autoperforantes
-                8 - FIltrar lijas
-                9 - Ver mi carrito
-                0 - Salir y abonar`))
-            switch(opcionIngresada){
-                case 1:
-                    discos.forEach(element => element.mostrarDisco())
-                    encontrarId(discos)
-                    console.log(carro)
-                break
-                case 2:
-                    tornillos.forEach(element => element.mostrarTorni())
-                    encontrarId(tornillos)
-                    console.log(carro)
-                break
-                case 3:
-                    autopMad.forEach(element => element.mostrarTorni())
-                    encontrarId(autopMad)
-                    console.log(carro)
-                break
-                case 4:
-                    lijas.forEach(element => element.mostrarLija())
-                    encontrarId(lijas)
-                    console.log(carro)
-                break
-                case 5:
-                    filtrarDesc(discos)
-                    encontrarId(discos)
-                break
-                case 6:
-                    filtrarDesc(tornillos)
-                    encontrarId(tornillos)
-                break
-                case 7:
-                    filtrarDesc(autopMad)
-                    encontrarId(autopMad)
-                break
-                case 8:
-                    filtrarDesc(lijas)
-                    encontrarId(lijas)
-                break
-                case 9:
-                    console.log(`Los productos que tienes en el carro son los siguientes:`)
-                    for(let prod of carro){
-                        console.log(prod.id, prod.name, prod.subR, prod.medida, prod.marc, prod.costo)
-                    }
-                    totalCarro = sumarCostos(carro)
-                    alert(`El total es ${totalCarro}. En consola puede ver el detalle.`)
-                break
-                case 0:
-                    mostrarSubto()
-                    salirMenu = true
-                break   
-                default:
-                    alert("Opción no válida, ingrese alguna presente en el menu.")
-                break
-            }
-        }while(!salirMenu)
-    }else {alert(`${name2.toUpperCase()} vuelve cuando gustes por nuestros productos!`)}
+function sumarCostos (array){
+    let totalCarro = 0
+    for (let precio of array){
+        totalCarro += precio.costo
+    }
     return totalCarro
+} 
+
+// Capt
+let divCart = document.querySelector(`#carro`)
+let mostrarCarro = document.querySelector(`#crearCart`)
+let vaciarCarro = document.querySelector(`#vaciarCarro`)
+let articulosDiv = document.querySelector("#articulos")
+let buscador = document.querySelector(`#buscador`)
+let menuAutop = document.querySelector(`#bot-autop`)
+
+
+// let totalCarro = document.querySelector(`#totalCarro`)
+// totalCarro
+function buscarInfo(buscado, array){
+    let busqueda = array.filter(
+        (dato) => dato.name.toLowerCase().includes(buscado.toLowerCase())  || dato.subR.toLowerCase().includes(buscado.toLowerCase()) || dato.medida.toLowerCase().includes(buscado.toLowerCase()) || dato.marc.toLowerCase().includes(buscado.toLowerCase())
+    )
+    busqueda.length == 0 ? (articulosDiv.innerHTML = `<h2>No se han encontrado coincidencias con ${buscado}`) : (articulosDiv.innerHTML = ``, showArray(busqueda))
 }
 
+buscador.addEventListener(`input`, () => {
+    buscarInfo(buscador.value, tornillos)
+})
+console.log(buscador.value)
 
-let vaciarCarro = document.querySelector(`#vaciarCarro`)
 vaciarCarro.addEventListener(`click`, ()=>{
     localStorage.removeItem(`carro`)
     divCart.innerHTML = ``
-    carro = [s]
+    carro = []
 })
 
-console.log(carro)
 // Crear div carro
-let divCart = document.querySelector(`#carro`)
-console.log(divCart)
+
 function showCart(array){
     divCart.innerHTML = ``
     for(let prod of array){
@@ -304,18 +227,19 @@ function showCart(array){
                                     <div class="objetos_carro">
                                         <img src="./../asset/${prod.img}" alt="">
                                         <p>${prod.id} - ${prod.name} ${prod.subR} ${prod.medida}  - Precio $${prod.costo} - Cantidad: ${prod.cant}</p>
-                                        <button class="borrarItem"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                        <button class="borrarItem" id="svgCarro"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
                                         <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
                                         </svg></button>
                                     </div>
                                     `
     divCart.appendChild(nuevoCarroDiv)
+    
     }
+    // let totalCarro = document.createElement(`div`)
+    // totalCarro.innerHTML = `<h2 id="totalCarros">Total:</h2>
+    // `
 }
 
-
-let mostrarCarro = document.querySelector(`#crearCart`)
-console.log(mostrarCarro)
 mostrarCarro.addEventListener(`click`,()=>{
     showCart(carro)
 })
@@ -328,12 +252,11 @@ carro = JSON.parse(localStorage.getItem(`carro`))
 }
 
 // Crear seccion articulos
-let articulosDiv = document.querySelector("#articulos")
+
 
 function showArray(array){
     articulosDiv.innerHTML = ``
     for (let art of array) {
-
         let nuevoArtDiv = document.createElement(`div`)
         nuevoArtDiv.className = "sarasa col"
         nuevoArtDiv.innerHTML = `<div id=${art.id} class="col" class="card" style="width: 18rem;">
@@ -377,7 +300,7 @@ menuTiraf.addEventListener(`click`,(e)=>{
     showArray(busqueda)
 })
 
-let menuAutop = document.querySelector(`#bot-autop`)
+
 menuAutop.addEventListener(`click`,(e)=>{
     let busqueda = tornillos.filter(
         (dato) => dato.subR === "autoperforante para madera"

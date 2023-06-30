@@ -81,13 +81,58 @@ main .fondo {
   height: 35px;
   width: 35px;
   background-color: #fdd41a;
+  z-index: 2;
 }
 .boton_cart :hover {
   background-color: rgba(253, 211, 26, 0.8078431373);
 }
 
 main {
+  position: relative;
   display: flex;
+}
+main .container-ferre {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: auto;
+}
+main .container-ferre .cardo {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 2px 3px rgba(0, 0, 0, 0.38);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  justify-content: center;
+}
+main .container-ferre .cardo img {
+  width: 330px;
+  height: 220px;
+  border-bottom: 1px solid #191919;
+  object-fit: contain;
+  background-color: #fff;
+}
+main .container-ferre .cardo h2 {
+  font-weight: 600px;
+  padding: 10px 0 7px 0;
+  font-size: 30px;
+}
+main .container-ferre .cardo p {
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 600;
+}
+main .container-ferre .cardo button {
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  background-color: #fdd41a;
+  margin-bottom: 8px;
 }
 main .marcas {
   height: auto;
@@ -111,19 +156,22 @@ main #carro .objetos_carro .borrarItem {
 main #carro p {
   align-self: center;
 }
-main .totalCarro {
+main #totalCarro {
   background-image: linear-gradient(#191919, #191919);
   background-size: 50%;
   background-position: 0 5%;
   padding-left: 10px;
 }
-main .totalCarro h2 {
+main #totalCarro h2 {
   font-size: 25px;
   color: #fff;
   padding: 5px 0;
 }
 main .accordion {
   width: 15vw;
+}
+main .offcanvas .offcanvas-body #filtros {
+  margin-top: 2vh;
 }
 main #button_prod {
   height: 50px;
@@ -145,32 +193,35 @@ main #button_prod:hover {
 }
 main .rigth {
   width: 85vw;
+  min-height: 85vh;
 }
-main .rigth .row {
-  gap: 20px;
+main .scroll_container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  margin-right: 10px;
 }
-main .rigth .sarasa {
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.575);
-  background-color: rgba(255, 255, 255, 0.7725490196);
-  color: #000000;
-}
-main .rigth .sarasa img {
-  object-fit: contain;
-  overflow: hidden;
-  height: 200px;
-  width: 100%;
-  border-radius: 10px;
-}
-main .rigth .sarasa button {
-  padding: 3px 10px;
+main .scroll_container svg {
+  color: #eee;
+  padding: 5px;
   border-radius: 5px;
-  font-weight: bold;
-  background-color: #fdd41a;
-  margin-bottom: 8px;
+  position: sticky;
+  top: 88vh;
+  cursor: pointer;
+  font-size: 20px;
+  color: #eee;
+  background-color: red;
+}
+main .scroll_container svg:hover {
+  color: blue;
+  background-color: #eee;
+}
+main .scroll_container::before {
+  content: "";
+  display: block;
+  height: 100vh;
+  pointer-events: none;
 }
 
 .accordion-button {
