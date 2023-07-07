@@ -5,6 +5,8 @@
 @import "components/navbar";
 @import "components/footer";
 @import "components/animaciones";
-
+@import "components/_componentes";
 @import "layout/index.scss";
-@import "layout/productos.scss"
+@import "layout/productos.scss";
+@import "layout/mediaqueries.scss";
+

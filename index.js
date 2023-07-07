@@ -1,204 +1,102 @@
-class Tornillo {
-    constructor (id, titulo, subRubro, grosor, precio, marca, imagen, cantidad){
-        this.id = id,
-        this.name = titulo,
-        this.subR = subRubro,
-        this.medida = grosor,
-        this.costo = precio,
-        this.marc = marca,
-        this.img = imagen,
-        this.cant = cantidad
-    } 
-    mostrarTorni(){
-        console.log(`${this.id} ${this.name} ${this.subR} su medida es ${this.medida}, su precio es $${this.costo} y su marca es ${this.marc}`)
-    }
-}
-
-class Discos {
-    constructor(id, titulo, subR, diametro, precio, marca, cantidad){
-        this.id = id
-        this.name = titulo,
-        this.subR = subR,
-        this.medida = diametro,
-        this.costo = precio,
-        this.marc = marca
-        this.cant = cantidad
-    }
-    mostrarDisco(){
-        console.log(`${this.id} ${this.name} para ${this.subR}, tamaño ${this.medida}, su precio es $${this.costo}. Marca ${this.marc}`)
-    }
-}
-
-class Lijas {
-    constructor(id, titulo, material, grano, precio, marca, imagen, cantidad){
-        this.id = id
-        this.name = titulo,
-        this.subR = material,
-        this.medida = grano
-        this.costo = precio,
-        this.marc = marca
-        this.img = imagen
-        this.cant = cantidad
-    }
-    mostrarLija(){
-        console.log(`${this.id} ${this.name} para ${this.subR}, grano ${this.medida}, su precio es $${this.costo}. Marca ${this.marc}`)
-    }
-}
-
-
-const lija1 = new Lijas(50, `Hoja de lija`, `madera`, "40", 180, `norton`, `massa.png`,1)
-const lija2 = new Lijas(51, `Hoja de lija`, `madera`, "60", 180, `norton`, `massa.png`,1)
-const lija3 = new Lijas(52, `Hoja de lija`, `madera`, "80", 180, `norton`, `massa.png`,1)
-const lija4 = new Lijas(53, `Hoja de lija`, `madera`, "100", 180, `norton`, `massa.png`,1)
-const lija5 = new Lijas(54, `Hoja de lija`, `madera`, "120", 180, `norton`, `massa.png`,1)
-const lija6 = new Lijas(55, `Hoja de lija`, `madera`, "150", 180, `norton`, `massa.png`,1)
-const lija7 = new Lijas(56, `Hoja de lija`, `madera`, "180", 180, `norton`, `massa.png`,1)
-
-const lija8 = new Lijas(57, `Hoja de lija`, `metal`, "40", 290, `norton`, `lijaAgua.png`,1)
-const lija9 = new Lijas(58, `Hoja de lija`, `metal`, "60", 290, `norton`, `lijaAgua.png`,1)
-const lija10 = new Lijas(59, `Hoja de lija`, `metal`, "80", 290, `norton`, `lijaAgua.png`,1)
-const lija11 = new Lijas(60, `Hoja de lija`, `metal`, "100", 290, `norton`, `lijaAgua.png`,1)
-const lija12 = new Lijas(61, `Hoja de lija`, `metal`, "120", 290, `norton`, `lijaAgua.png`,1)
-const lija13 = new Lijas(62, `Hoja de lija`, `metal`, "150", 290, `norton`, `lijaAgua.png`,1)
-const lija14 = new Lijas(63, `Hoja de lija`, `metal`, "180", 290, `norton`, `lijaAgua.png`,1)
-
-const lija15 = new Lijas(64, `Hoja de lija`, `tela esmeril`, "40", 450, `norton`, `esmeril.png`,1)
-const lija16 = new Lijas(65, `Hoja de lija`, `tela esmeril`, "60", 450, `norton`, `esmeril.png`,1)
-const lija17 = new Lijas(66, `Hoja de lija`, `tela esmeril`, "80", 450, `norton`, `esmeril.png`,1)
-const lija18 = new Lijas(67, `Hoja de lija`, `tela esmeril`, "100", 450, `norton`, `esmeril.png`,1)
-const lija19 = new Lijas(68, `Hoja de lija`, `tela esmeril`, "120", 450, `norton`, `esmeril.png`,1)
-const lija20 = new Lijas(69, `Hoja de lija`, `tela esmeril`, "150", 450, `norton`, `esmeril.png`,1)
-const lija21 = new Lijas(70, `Hoja de lija`, `tela esmeril`, "180", 450, `norton`, `esmeril.png`,1)
-
-const lija22 = new Lijas(64, `Hoja de lija`, `antiempaste`, "40", 450, `norton`, `antie.png`,1)
-const lija23 = new Lijas(65, `Hoja de lija`, `antiempaste`, "60", 450, `norton`, `antie.png`,1)
-const lija24 = new Lijas(66, `Hoja de lija`, `antiempaste`, "80", 450, `norton`, `antie.png`,1)
-const lija25 = new Lijas(67, `Hoja de lija`, `antiempaste`, "100", 450, `norton`, `antie.png`,1)
-const lija26 = new Lijas(68, `Hoja de lija`, `antiempaste`, "120", 450, `norton`, `antie.png`,1)
-const lija27 = new Lijas(69, `Hoja de lija`, `antiempaste`, "150", 450, `norton`, `antie.png`,1)
-const lija28 = new Lijas(70, `Hoja de lija`, `antiempaste`, "180", 450, `norton`, `antie.png`,1)
-
-const tornillo1 = new Tornillo(1, "tornillo", "tirafondo", `3/16 x 1"`, 5.3, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo2 = new Tornillo(2, "tornillo", "tirafondo", `3/16 x 1 1/4"`, 6, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo3 = new Tornillo(3,"tornillo", "tirafondo", `3/16 x 1 1/2"`, 6.5, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo4 = new Tornillo(4,"tornillo", "tirafondo", `3/16 x 1 3/4"`, 7, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo5 = new Tornillo(5,"tornillo", "tirafondo", `3/16 x 2"`, 7.5, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo6 = new Tornillo(6,"tornillo", "tirafondo", `3/16 x 2 1/4"`, 8, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo7 = new Tornillo(7,"tornillo", "tirafondo", `3/16 x 2 1/2"`, 8.5, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo8 = new Tornillo(8,"tornillo", "tirafondo", `3/16 x 3"`, 9, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo9 = new Tornillo(9,"tornillo", "tirafondo", `1/4 x 1"`, 10, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo10 = new Tornillo(10,"tornillo", "tirafondo", `1/4 x 1 1/4"`, 10.5, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo11 = new Tornillo(11,"tornillo", "tirafondo", `1/4 x 1 1/2"`, 11, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo12 = new Tornillo(12,"tornillo", "tirafondo", `1/4 x 1 3/4"`, 11.5, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo13 = new Tornillo(13,"tornillo", "tirafondo", `1/4 x 2"`, 12, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo14 = new Tornillo(14,"tornillo", "tirafondo", `1/4 x 2 1/2"`, 12.5, `telfix`, `tornilloTiraf.jpg`,1)
-const tornillo15 = new Tornillo(15,"tornillo", "tirafondo", `1/4 x 3"`, 13, `telfix`, `tornilloTiraf.jpg`,1)
-
-const tornillo16 = new Tornillo(16,`tornillo`, `autoperforante para madera`, `6 x 5/8"`, 3, `mitofix`, `drywall.jpg`,1)
-const tornillo17 = new Tornillo(17,`tornillo`, `autoperforante para madera`, `6 x 3/4"`, 3, `mitofix`, `drywall.jpg`,1)
-const tornillo18 = new Tornillo(18,`tornillo`, `autoperforante para madera`, `6 x 1"`, 3, `mitofix`, `drywall.jpg`,1)
-const tornillo19 = new Tornillo(19,`tornillo`, `autoperforante para madera`, `6 x 1 1/4"`, 3, `mitofix`, `drywall.jpg`,1)
-const tornillo20 = new Tornillo(20,`tornillo`, `autoperforante para madera`, `6 x 1 1/2"`, 3, `mitofix`, `drywall.jpg`,1)
-const tornillo21 = new Tornillo(21,`tornillo`, `autoperforante para madera`, `6 x 1 3/4"`, 3, `mitofix`, `drywall.jpg`,1)
-const tornillo22 = new Tornillo(22,`tornillo`, `autoperforante para madera`, `6 x 2"`, 3, `mitofix`, `drywall.jpg`,1)
-const tornillo23 = new Tornillo(23,`tornillo`, `autoperforante para madera`, `8 x 3/4"`, 3, `mitofix`, `drywall.jpg`,1)
-const tornillo24 = new Tornillo(24,`tornillo`, `autoperforante para madera`, `8 x 1"`, 3, `mitofix`, `drywall.jpg`,1)
-const tornillo25 = new Tornillo(25,`tornillo`, `autoperforante para madera`, `8 x 1 1/4"`, 3, `mitofix`, `drywall.jpg`,1)
-const tornillo26 = new Tornillo(26,`tornillo`, `autoperforante para madera`, `8 x 1 1/2"`, 3, `mitofix`, `drywall.jpg`)
-const tornillo27 = new Tornillo(27,`tornillo`, `autoperforante para madera`, `8 x 1 3/4"`, 3, `mitofix`, `drywall.jpg`,1)
-const tornillo28 = new Tornillo(28,`tornillo`, `autoperforante para madera`, `8 x 2"`, 3, `mitofix`, `drywall.jpg`,1)
-
-const tornillo29 = new Tornillo(29,`tornillo`, `cabeza tanque`, `3/16 x 1/2 `, 3, `telfix`, `tornilloTanque.jpg`,1)
-const tornillo30 = new Tornillo(30,`tornillo`, `cabeza tanque`, `3/16 x 3/4`, 3, `telfix`, `tornilloTanque.jpg`,1)
-const tornillo31 = new Tornillo(31,`tornillo`, `cabeza tanque`, `3/16 x 1`, 3, `telfix`, `tornilloTanque.jpg`, 1)
-const tornillo32 = new Tornillo(32,`tornillo`, `cabeza tanque`, `3/16 x 1 1/4`, 3, `telfix`, `tornilloTanque.jpg`, 1)
-const tornillo33 = new Tornillo(33,`tornillo`, `cabeza tanque`, `3/16 x 1 1/2`, 3, `telfix`, `tornilloTanque.jpg`, 1)
-const tornillo34 = new Tornillo(34,`tornillo`, `cabeza tanque`, `3/16 x 1 3/4`, 3, `telfix`, `tornilloTanque.jpg`, 1)
-const tornillo35 = new Tornillo(35,`tornillo`, `cabeza tanque`, `3/16 x 2`, 3, `telfix`, `tornilloTanque.jpg`, 1)
-const tornillo36 = new Tornillo(36,`tornillo`, `cabeza tanque`, `3/16 x 2 1/2`, 3, `telfix`, `tornilloTanque.jpg`, 1)
-const tornillo37 = new Tornillo(37,`tornillo`, `cabeza tanque`, `3/16 x 3`, 3, `telfix`, `tornilloTanque.jpg`, 1)
-
-const disco1 = new Discos (29, `disco de corte`, `madera`, "115", 350, `norton`, 1)
-const disco2 = new Discos (30, `disco de corte`, `madera`, "180", 600, `norton`, 1)
-const disco3 = new Discos (31, `disco de corte`, `madera`, "230", 900, `norton`, 1)
-const disco4 = new Discos (32, `disco de corte`, `hierro`, "115", 400, `norton`, 1)
-const disco5 = new Discos (33, `disco de corte`, `hierro`, "180", 550, `norton`, 1)
-const disco6 = new Discos (34, `disco de corte`, `hierro`, "230", 850, `norton`, 1)
-const disco7 = new Discos (35, `disco de corte`, `chapa`, "115", 450, `norton`, 1)
-const disco8 = new Discos (36, `disco de corte`, `chapa`, "180", 650, `norton`, 1)
-const disco9 = new Discos (37, `disco de corte`, `chapa`, "230", 1050, `norton`, 1)
-const disco10 = new Discos (38, `disco de corte`, `hormigon`, "115", 1555, `norton`, 1)
-const disco11 = new Discos (39, `disco de corte`, `hormigon`, "180", 2000, `norton`, 1)
-const disco12 = new Discos (40, `disco de corte`, `hormigon`, "230", 2450, `norton`, 1)
-const disco13 = new Discos (41, `disco de corte`, `ceramica`, "115", 1700, `norton`, 1)
-const disco14 = new Discos (42, `disco de corte`, `ceramica`, "180", 2200, `norton`, 1)
-const disco15 = new Discos (43, `disco de corte`, `ceramica`, "230", 2950, `norton`, 1)
-const disco16 = new Discos (44, `disco de corte`, `hierro`, "115", 500, `tyrolit`, 1)
-const disco17 = new Discos (45, `disco de corte`, `hierro`, "180", 650, `tyrolit`, 1)
-const disco18 = new Discos (46, `disco de corte`, `hierro`, "230", 950, `tyrolit`, 1)
-const disco19 = new Discos (47, `disco de corte`, `chapa`, "115", 550, `tyrolit`, 1)
-const disco20 = new Discos (48, `disco de corte`, `chapa`, "180", 750, `tyrolit`, 1)
-const disco21 = new Discos (49, `disco de corte`, `chapa`, "230", 1150, `tyrolit`, 1)
-
-const tornillos = []
-tornillos.push(tornillo1, tornillo2, tornillo3, tornillo4, tornillo5, tornillo6, tornillo7, tornillo8, tornillo9, tornillo10, tornillo11, tornillo12, tornillo13, tornillo14, tornillo15, tornillo16, tornillo17, tornillo18, tornillo19, tornillo20, tornillo21, tornillo22, tornillo23, tornillo24, tornillo25, tornillo26, tornillo27, tornillo28, tornillo29, tornillo30, tornillo31, tornillo32, tornillo33, tornillo34, tornillo35, tornillo36, tornillo37)
-
-const autopMad = [`obsoleto`]
-
-const discos = []
-discos.push(disco1, disco2, disco3, disco4, disco5, disco6, disco7, disco8, disco9, disco10, disco11, disco12, disco13, disco14, disco15, disco16, disco17, disco18, disco19, disco20, disco21)
-
-const lijas = [lija1, lija2, lija3, lija4, lija5, lija6, lija7, lija8, lija9, lija10, lija11, lija12, lija13, lija14, lija15, lija16, lija17, lija18, lija19, lija20, lija21, lija22, lija23, lija24, lija25, lija26, lija27, lija28]
-let carro = []
-
-function encontrarId(array){
-    option = parseInt(prompt(`Ingrese el ID del producto deseado, los mismos se muestran en consola.`))
-    let busqueda = array.find(
-        (ids) => ids.id === option
-    )
-    if(busqueda == undefined){
-        alert(`Vuelve a ingresar una opción válida.`)
-    } else{
-        carro.push(busqueda)
-        alert(`${busqueda.name} ${busqueda.subR} ${busqueda.medida} agregado al carrito!`)
-    }
-}
-
-// let totalCarro
-
-
-function filtrarDesc(array){
-    let datoBusqueda = prompt("Ingrese el valor por el cual quiere filtrar, ya sea material, medida o marca del producto.")
-    let busqueda = array.filter(
-        (dato) => dato.name.toLowerCase().includes(datoBusqueda.toLowerCase()) || dato.subR.toLowerCase().includes(datoBusqueda.toLowerCase()) || dato.medida.toLowerCase().includes(datoBusqueda.toLowerCase()) || dato.marc.toLowerCase().includes(datoBusqueda.toLowerCase())
-    )
-    if(busqueda.length == 0){
-        console.log(`El dato ${datoBusqueda} no está en nuestro catalogo.`)
-    }else{
-        console.log(`Artículos encontrados:`)
-        busqueda.forEach(console.log)
-    }
-}
-
-function sumarCostos (array){
-    let totalCarro = 0
-    for (let precio of array){
-        totalCarro += precio.costo
-    }
-    return totalCarro
-} 
-
 // Capt
 let divCart = document.querySelector(`#carro`)
 let mostrarCarro = document.querySelector(`#crearCart`)
 let vaciarCarro = document.querySelector(`#vaciarCarro`)
 let articulosDiv = document.querySelector("#articulos")
 let buscador = document.querySelector(`#buscador`)
+// Menues
 let menuAutop = document.querySelector(`#bot-autop`)
+let menuDiscos = document.querySelector(`#accordionDicos`)
+let menuDiscoMadera = document.querySelector(`#bot-discoMad`)
+let menuDiscoMetal = document.querySelector(`#bot-discoMetal`)
+let menuDiscosMampos = document.querySelector(`#bot-discoMampos`)
+let menuProductoss = document.querySelector(`#accordionTorni`)
+let menuTiraf = document.querySelector(`#bot-tiraf`)
+let menuTorniTanque = document.querySelector(`#bot-tanque`)
+let menuLijas = document.querySelector(`#accordionLija`)
+let menuLijaMad = document.querySelector(`#bot-lijaMad`)
+let menuLijaAgua = document.querySelector(`#bot-lijaAgua`)
+let menuLijaAnti = document.querySelector(`#bot-lijaANti`)
+let menuLijaEsme = document.querySelector(`#bot-lijaEsme`)
+
+let popUpAgregado = document.querySelector(`.popUpAgregado`)
+let infoCLienteNav = document.querySelector(`#infoCliente`)
+let totalCarro = document.querySelector(`#totalCarro`)
+let menuCliente = document.querySelector(`#menuCliente`)
+// form
+let inputNombre = document.querySelector(`#inputNombre`)
+let inputMail = document.querySelector(`#inputEmail4`)
+let inputPass = document.querySelector(`#inputPassword4`)
+let inputAddress = document.querySelector(`#inputAddress`)
+let inputCity = document.querySelector(`#inputCity`)
+let inputProv = document.querySelector(`#inputState`)
+let inputZip = document.querySelector(`#inputZip`)
+let submit = document.querySelector(`#submit`)
+let deslog = document.querySelector(`#deslog`)
+
+// sweet alert
+const Toast = Swal.mixin({
+    toast: true,
+    position: 'bottom-end',
+    showConfirmButton: false,
+    timer: 4000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
 
 
-// let totalCarro = document.querySelector(`#totalCarro`)
-// totalCarro
+// Condicional para cargar el DOM - Usuario ingresa por primera vez, carga FORM - sino carga array productos
+if(localStorage.getItem(`Usuario`)){
+    nuevoUsuario = JSON.parse(localStorage.getItem(`Usuario`))
+    infoCLienteNav.innerText =`${nuevoUsuario.nombre[0].toUpperCase()}${nuevoUsuario.nombre.substring(1)}`
+    menuCliente.innerHTML = `
+                                <li><p class="dropdown-item" >${nuevoUsuario.email}</p></li>
+                                <li><p class="dropdown-item" >${nuevoUsuario.direcc} </p></li>
+                                <li><p class="dropdown-item" >${nuevoUsuario.ciudad} </p></li>
+                                <button class="btn btn-danger dropdown-item" id="deslog">Desloguear</button>
+        `
+        showArray(productos)
+        
+}else {
+    submit.addEventListener(`click`,(e) => {
+        infoCLienteNav.innerText = `${inputNombre.value[0].toUpperCase()}${inputNombre.value.substring(1)}`
+        menuCliente.innerHTML = `
+                                <li><p class="dropdown-item" >${inputMail.value}</p></li>
+                                <li><p class="dropdown-item" >${inputAddress.value} </p></li>
+                                <li><p class="dropdown-item" >${inputCity.value} </p></li>
+                                <button class="btn btn-danger dropdown-item" id="deslog">Desloguear</button>
+        `
+        Toast.fire({
+            icon: `success`,
+            title: `Usuario registrado`
+        })
+        e.preventDefault()
+        const nuevoUsuario = new Usuarios (usuarios.length+1, inputNombre.value, inputMail.value, inputPass.value, inputAddress.value, inputCity.value, inputProv.value, inputZip.value)
+        usuarios.push(nuevoUsuario)
+        localStorage.setItem(`Usuario`,JSON.stringify(nuevoUsuario))
+        
+    })
+}
+
+// ver si la KEY existe en storage
+if(localStorage.getItem(`carro`)){
+    carro = JSON.parse(localStorage.getItem(`carro`))
+    }else{
+        localStorage.setItem(`carro`, JSON.stringify(carro))
+}
+
+// No funciona - borrar datos del usuario
+if(localStorage.getItem(`Usuario`)){
+    deslog.addEventListener(`click`, () => {
+    localStorage.removeItem(`Usuario`)
+    })
+}
+
+
+// Input buscador
 function buscarInfo(buscado, array){
     let busqueda = array.filter(
         (dato) => dato.name.toLowerCase().includes(buscado.toLowerCase())  || dato.subR.toLowerCase().includes(buscado.toLowerCase()) || dato.medida.toLowerCase().includes(buscado.toLowerCase()) || dato.marc.toLowerCase().includes(buscado.toLowerCase())
@@ -206,161 +104,226 @@ function buscarInfo(buscado, array){
     busqueda.length == 0 ? (articulosDiv.innerHTML = `<h2>No se han encontrado coincidencias con ${buscado}`) : (articulosDiv.innerHTML = ``, showArray(busqueda))
 }
 
-buscador.addEventListener(`input`, () => {
-    buscarInfo(buscador.value, tornillos)
-})
-console.log(buscador.value)
 
-vaciarCarro.addEventListener(`click`, ()=>{
-    localStorage.removeItem(`carro`)
-    divCart.innerHTML = ``
-    carro = []
-})
+// FUNCIONES
 
 // Crear div carro
-
 function showCart(array){
+    // Crea las card en el modal
     divCart.innerHTML = ``
-    for(let prod of array){
-        let nuevoCarroDiv = document.createElement(`div`)
-        nuevoCarroDiv.innerHTML = `
-                                    <div class="objetos_carro">
-                                        <img src="./../asset/${prod.img}" alt="">
-                                        <p>${prod.id} - ${prod.name} ${prod.subR} ${prod.medida}  - Precio $${prod.costo} - Cantidad: ${prod.cant}</p>
-                                        <button class="borrarItem" id="svgCarro"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
-                                        </svg></button>
-                                    </div>
-                                    `
-    divCart.appendChild(nuevoCarroDiv)
-    
-    }
-    // let totalCarro = document.createElement(`div`)
-    // totalCarro.innerHTML = `<h2 id="totalCarros">Total:</h2>
-    // `
-}
+    array.forEach((prod) => {
+        divCart.innerHTML += `
+                            <div class="objetos_carro" id="productoCarrito${prod.id}">
+                                <img src="./../asset/${prod.img}" alt="">
+                                <p>${prod.id} - ${prod.name} ${prod.subR} ${prod.medida}  - Precio $${prod.costo} - Cantidad: ${prod.cant}</p>
+                                <button class="btn btn-danger" id="borrarItem${prod.id}"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                </svg></button>
+                            </div>
+                            `
+    })
+    // eliminar prod de carrito
+    array.forEach((prod) => {
+        document.querySelector(`#borrarItem${prod.id}`).addEventListener(`click`,() => {
+            let cardProducto = document.getElementById(`productoCarrito${prod.id}`)
+            cardProducto.remove()
+            
+            let productoEliminar = array.find((elem) => elem.id == prod.id)
+            
+            let posicion = array.indexOf(productoEliminar)
+            
+            array.splice(posicion, 1)
+            
+            localStorage.setItem("carro", JSON.stringify(array))
 
-mostrarCarro.addEventListener(`click`,()=>{
-    showCart(carro)
-})
+            Toast.fire({
+                icon: 'warning',
+                title: 'Has eliminado el producto del carrito.'
+            })
+            calcularTotal(array)
+        } )
+    })
 
-// ver si la KEY existe en storage
-if(localStorage.getItem(`carro`)){
-carro = JSON.parse(localStorage.getItem(`carro`))
-}else{
-    localStorage.setItem(`carro`, JSON.stringify(carro))
+    calcularTotal(carro)
 }
 
 // Crear seccion articulos
-
-
 function showArray(array){
     articulosDiv.innerHTML = ``
     for (let art of array) {
         let nuevoArtDiv = document.createElement(`div`)
-        nuevoArtDiv.className = "sarasa col"
-        nuevoArtDiv.innerHTML = `<div id=${art.id} class="col" class="card" style="width: 18rem;">
+        nuevoArtDiv.className = "container-ferre col"
+        nuevoArtDiv.innerHTML = `<div id=${art.id} class="cardo" style="width: 18rem;">
                                     <img src="./../asset/${art.img}" alt="">
                                     <div>
-                                        <h2>${art.name} ${art.subR}</h2>
+                                        <h2>${art.name}</h2>
                                         <p>Medida: ${art.medida}</p>
                                         <p>Precio: $${art.costo}.- </p>
-                                        <p>Marca ${art.marc} </p>
-                                        <button id="btn-agregar${art.id}">Comprar</button>
+                                        <p>Marca: ${art.marc} </p>
+                                        <button class="btn-agregar${art.id}" id="liveToastBtn">Comprar</button>
                                     </div>
                                 </div>`
                                 
     articulosDiv.appendChild(nuevoArtDiv)
-    let agregarBtn = document.querySelector(`#btn-agregar${art.id}`)
+    let agregarBtn = document.querySelector(`.btn-agregar${art.id}`)
     agregarBtn.addEventListener(`click`,()=>{
-        let busqueda = array.find(
-            (ids) => ids.id === art.id)
-        carro.push(busqueda)
-        // setear en storage
-        localStorage.setItem(`carro`,JSON.stringify(carro))
+        agregarAlCarrito(art)
     })
     }
     
 }
 
+function agregarAlCarrito(producto){
+    let nuevoProd = carro.find((elem)=>elem.id==producto.id)
+
+    if(nuevoProd == undefined){
+        carro.push(producto)
+        localStorage.setItem(`carro`, JSON.stringify(carro))
+        console.log(carro)
+        Toast.fire({
+            icon: 'success',
+            title: 'Agregado al carrito!'
+        })
+    }else{
+        Toast.fire({
+            icon: 'error',
+            title: 'El producto ya está en el carrito'
+        })
+    }
+}
+
+function calcularTotal(array){
+    let total = array.reduce((acc,productoCarrito) => acc + productoCarrito.costo, 0)
+    total == 0 ? totalCarro.innerHTML = `<h2>Su carro esta vacio</h2>` : totalCarro.innerHTML = `<h2>Tolal: $${total}</h2>`
+}
+
+// Eventos
+buscador.addEventListener(`input`, () => {
+    buscarInfo(buscador.value, productos)
+})
+
+vaciarCarro.addEventListener(`click`, ()=>{
+    localStorage.removeItem(`carro`)
+    divCart.innerHTML = ``
+    carro = []
+    calcularTotal(carro)
+})
+
+mostrarCarro.addEventListener(`click`,()=>{
+    showCart(carro)
+})
+
+
 // Menues tornillos
-let menuTornillos = document.querySelector(`#accordionTorni`)
-menuTornillos.addEventListener("click",(e)=>{
+
+menuProductoss.addEventListener("click",(e)=>{
+    let busqueda = productos.filter(
+        (dato) => dato.name.includes("Tornillo")
+    )
     e.preventDefault()
-    showArray(tornillos)
+    showArray(busqueda)
 })
 
 // filtrados tornillos
-let menuTiraf = document.querySelector(`#bot-tiraf`)
+
 menuTiraf.addEventListener(`click`,(e)=>{
-    let busqueda = tornillos.filter(
+    let busqueda = productos.filter(
         (dato) => dato.subR === "tirafondo"
     )
     e.preventDefault()
     showArray(busqueda)
 })
 
-
 menuAutop.addEventListener(`click`,(e)=>{
-    let busqueda = tornillos.filter(
-        (dato) => dato.subR === "autoperforante para madera"
+    let busqueda = productos.filter(
+        (dato) => dato.name === "Tornillo autoperforante p/madera"
     )
     e.preventDefault()
     showArray(busqueda)
 })
 
-let menuTorniTanque = document.querySelector(`#bot-tanque`)
+
 menuTorniTanque.addEventListener(`click`,(e)=>{
-    let busqueda = tornillos.filter(
-        (dato) => dato.subR === "cabeza tanque"
+    let busqueda = productos.filter(
+        (dato) => dato.subR === "tanque"
     )
     e.preventDefault()
     showArray(busqueda)
 })
 
+// Eventos lijas
 
-// Menues lijas
-let menuLijas = document.querySelector(`#accordionLija`)
 menuLijas.addEventListener(`click`,(e)=>{
+    let busqueda = productos.filter(
+        (dato) => dato.name.includes("lija")
+    )
     e.preventDefault()
-    showArray(lijas)
+    showArray(busqueda)
 })
 // filtrados lijas
-let menuLijaMad = document.querySelector(`#bot-lijaMad`)
+
 menuLijaMad.addEventListener(`click`,(e)=>{
-    let busqueda = lijas.filter(
-        (dato) => dato.subR === "madera"
+    let busqueda = productos.filter(
+        (dato) => dato.name.includes("oja de lija") && dato.subR.includes("madera")
     )
     e.preventDefault()
     showArray(busqueda)
-    busqueda.forEach(console.log)
 })
 
-let menuLijaAgua = document.querySelector(`#bot-lijaAgua`)
 menuLijaAgua.addEventListener(`click`,(e)=>{
-    let busqueda = lijas.filter(
+    let busqueda = productos.filter(
         (dato) => dato.subR === "metal"
     )
     e.preventDefault()
     showArray(busqueda)
 })
 
-let menuLijaAnti = document.querySelector(`#bot-lijaANti`)
 menuLijaAnti.addEventListener(`click`,(e)=>{
-    let busqueda = lijas.filter(
+    let busqueda = productos.filter(
         (dato) => dato.subR === "antiempaste"
     )
     e.preventDefault()
     showArray(busqueda)
 })
 
-let menuLijaEsme = document.querySelector(`#bot-lijaEsme`)
 menuLijaEsme.addEventListener(`click`,(e)=>{
-    let busqueda = lijas.filter(
+    let busqueda = productos.filter(
         (dato) => dato.subR === "tela esmeril"
     )
     e.preventDefault()
     showArray(busqueda)
 })
 
+// Eventos discos
 
+menuDiscos.addEventListener("click", (e) => {
+    let busqueda = productos.filter(
+        (dato) => dato.name.includes("Disco")
+        )
+        e.preventDefault()
+        showArray(busqueda)
+})
+
+menuDiscoMadera.addEventListener("click", (e) => {
+    let busqueda = productos.filter(
+            (dato) => dato.name.includes("Disco de corte") && dato.subR.includes("madera")
+    )
+    e.preventDefault()
+    showArray(busqueda)
+})
+
+menuDiscoMetal.addEventListener("click", (e) => {
+    let busqueda = productos.filter(
+            (dato) => dato.name.includes("Disco de corte") && dato.subR.includes("metal")
+    )
+    e.preventDefault()
+    showArray(busqueda)
+})
+
+menuDiscosMampos.addEventListener("click", (e) => {
+    let busqueda = productos.filter(
+            (dato) => dato.name.includes("Disco de corte") && dato.subR.includes("mamposteria")
+    )
+    e.preventDefault()
+    showArray(busqueda)
+})

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Link AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- LINK CSS -->
     <link rel="stylesheet" href="./../css/style.css">
-    <title>Document</title>
+
+    <title>Productos</title>
 </head>
 <body>
     <header>
@@ -24,33 +27,89 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="./productos.html">Productos</a>
                         </li>
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Productos</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modalForm" aria-current="page" href="" >Registrarse</a>
+                        </li>
                     </ul>
                     <form class="d-flex" role="search">
-                    <input class="form-control me-2" id="buscador" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        <input class="form-control me-2" id="buscador" type="search" placeholder="Buscar" aria-label="Search">
                     </form>
+                    <div class="cliente dropdown">
+                        <button class="btn btn-primary dropdown-toggle" id="infoCliente" type="button" data-bs-toggle="dropdown" aria-expanded="false">Invitado</button>
+                        <ul class="dropdown-menu dropdown-menu-end" id="menuCliente" >
+                            <li><a class="dropdown-item" href="#">Sin datos</a></li>
+                            <button class="btn btn-danger dropdown-item" id="deslog">Desloguear</button>
+                        </ul>
+                        
+                    </div>
                     <button class="boton_cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="crearCart"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                     </svg></button>
                     
                 </div>
             </div>
+            
         </nav>
+        
     </header>
     <!-- MAIN -->
-    <main>
-        <!-- MODAL -->
+    <main class="mainProductos">
+        <!-- MODAL FORM -->
+        <div class="modal fade modal-scrolling" id="modalForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputNamel4">Nombre y apellido</label>
+                                <input type="text" class="form-control" id="inputNombre" placeholder="Nombre y apellido">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            </div>
+                            
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Contraseña</label>
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress">Dirección</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="Calle falsa 123">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">Ciudad</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputState">Provincia</label>
+                                <select id="inputState" class="form-control">
+                                <option selected>Elige una opcion</option>
+                                <option>Buenos Aires</option>
+                                <option>Córdoba</option>
+                                <option>Santa Fe</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">Código postal</label>
+                                <input type="number" class="form-control" id="inputZip">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="submit">Registrarse</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL CARRO-->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
@@ -62,11 +121,11 @@
                         
                     </div>
                     <div id="totalCarro">
-                        <!-- <h2>Total:</h2> -->
+                        <h2>Total:</h2>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Comprar</button>
+                        <button type="button" class="btn btn-primary">Finalizar compra</button>
                         <button type="button" class="btn btn-danger" id="vaciarCarro">Vaciar carrito</button>
                     </div>
                 </div>
@@ -89,7 +148,7 @@
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <div class="accordion col-xxl-2 col-xl-2 col-md-3 col-sm-3 col-xs-1" id="accordionExample">
+                <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" id="accordionTorni" data-bs-toggle="collapse" data-bs-target="#collapseuno" aria-expanded="true" aria-controls="collapseuno">
@@ -153,71 +212,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-5" id="filtros">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
             </div>
         </div>
         <button class="btn btn-primary" id="button_prod" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">PRODUCTOS</button>
-        <!-- RIGTH section -->
-        <section class="container rigth">
+        <!-- RIGHT section -->
+        <section class="container right">
             <div id="articulos" class="row">
-                <h1>Regristrate!</h1>
-                <p>Completa el regristro y ya puedes hacer tu pedido.</p>
                 
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPassword4">Contraseña</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Contraseña">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress">Dirección</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Calle falsa 123">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress2">Dirección 2 - Opcional</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Casa, piso, N° depto">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputCity">Ciudad</label>
-                            <input type="text" class="form-control" id="inputCity">
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="inputState">State</label>
-                            <select id="inputState" class="form-control">
-                            <option selected>Elige una opcion</option>
-                            <option>Santo Tomé</option>
-                            <option>Santa Fe</option>
-                            <option>Sauce viejo</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-2">
-                            <label for="inputZip">Código postal</label>
-                            <input type="number" class="form-control" id="inputZip">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck">
-                            <label class="form-check-label" for="gridCheck">
-                                Check me out
-                            </label>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-                </form>
             </div>
         </section>
         <div class="scroll_container">
@@ -231,7 +232,12 @@
     </footer>
     <!-- Script boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- Script SWEET Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Script AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Script JS -->
-    <script src="./../index_copy.js"></script>
+    <script src="./../class_objets.js"></script>
+    <script src="./../index.js"></script>
 </body>
 </html>

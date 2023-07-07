@@ -8,9 +8,15 @@
         background-color: $colorAma;
         border: 1px solid #191919;
         color: #191919;
-}
+    }
 }
 
-// .btn-extra{
-
-// }
+#liveToastBtn{
+    background-color: #191919;
+    color: #eee;
+    border: #191919;
+    transition: 0.5s;
+    &:hover{
+        background-color: #727171;
+    }
+}

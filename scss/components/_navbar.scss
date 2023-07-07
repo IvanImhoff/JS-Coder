@@ -1,5 +1,5 @@
 .navbar {
-    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     .container-fluid {
         background-color: $colorAma;
         img {
@@ -10,6 +10,26 @@
         span{
             font-family: "Cocomat";
             font-weight: bold;
+        }
+
+        .cliente {
+            margin-right: 50px;
+        }
+        
+        .boton_cart{
+            margin-right: 20px;
+        }
+        .nav-item{
+            font-size: 20px;
+            font-family: "Cocomat";
+            font-weight: bold;
+            &:hover{
+                box-shadow: #4440409c;
+                a{
+
+                    color: #fff;
+                }
+            }
         }
     }
     .navbar-brand{

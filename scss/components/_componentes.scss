@@ -1,0 +1,21 @@
+#modalForm{
+    
+    .modal-dialog{
+
+        .modal-body{
+            background-color: rgba(17, 7, 7, 0.767);
+            color: #eee;
+            label{
+                padding-left: 5px;
+            }
+            input{
+
+                box-shadow: none;
+                margin-bottom: 10px;
+            }
+            #inputAddress{
+                width: 50%;
+            }
+        }
+    }
+}
