@@ -1,3 +1,5 @@
+// En el DOM se carga por defecto todo el catalogo de productos. En el buscador va filtrando por cada input del usuario (la busqueda se realiza en todos los atributos de los objetos, en el array PRODUCTOS). En los elementos del acordeon filtra y muestra en el DOM según indica el rubro. En el NAV, en la opción Registrarse, se guardan los datos del usuario ingresado por input, actualiza un fragmento del DOM con sus datos. (Aún no logré que funcione correctamente el evento en el botón desloguear). En el storage se guarda el carrito, los datos del usuario.
+
 // Capt
 let divCart = document.querySelector(`#carro`)
 let mostrarCarro = document.querySelector(`#crearCart`)
@@ -32,7 +34,7 @@ let inputCity = document.querySelector(`#inputCity`)
 let inputProv = document.querySelector(`#inputState`)
 let inputZip = document.querySelector(`#inputZip`)
 let submit = document.querySelector(`#submit`)
-let deslog = document.querySelector(`#deslog`)
+// let deslog = document.querySelector(`#deslog`)
 
 // sweet alert
 const Toast = Swal.mixin({
@@ -47,6 +49,8 @@ const Toast = Swal.mixin({
         }
     })
 
+// Cargar todos los productos al DOM
+showArray(productos)
 
 // Condicional para cargar el DOM - Usuario ingresa por primera vez, carga FORM - sino carga array productos
 if(localStorage.getItem(`Usuario`)){
@@ -58,8 +62,6 @@ if(localStorage.getItem(`Usuario`)){
                                 <li><p class="dropdown-item" >${nuevoUsuario.ciudad} </p></li>
                                 <button class="btn btn-danger dropdown-item" id="deslog">Desloguear</button>
         `
-        showArray(productos)
-        
 }else {
     submit.addEventListener(`click`,(e) => {
         infoCLienteNav.innerText = `${inputNombre.value[0].toUpperCase()}${inputNombre.value.substring(1)}`
@@ -88,12 +90,12 @@ if(localStorage.getItem(`carro`)){
         localStorage.setItem(`carro`, JSON.stringify(carro))
 }
 
-// No funciona - borrar datos del usuario
-if(localStorage.getItem(`Usuario`)){
+// No funciona correctamente - borrar datos del usuario
+let deslog = document.querySelector(`#deslog`)
     deslog.addEventListener(`click`, () => {
+    
     localStorage.removeItem(`Usuario`)
     })
-}
 
 
 // Input buscador
