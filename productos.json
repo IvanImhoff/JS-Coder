@@ -1,0 +1,1025 @@
+[
+    {
+        "id" : 1,
+        "name" : "Hoja de lija",
+        "subR" : "madera",
+        "medida" : "40",
+        "costo" : 180,
+        "marc" : "norton",
+        "img" : "massa.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 2,
+        "name" : "Hoja de lija",
+        "subR" : "madera",
+        "medida" : "60",
+        "costo" : 180,
+        "marc" : "norton",
+        "img" : "massa.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 3,
+        "name" : "Hoja de lija",
+        "subR" : "madera",
+        "medida" : "80",
+        "costo" : 180,
+        "marc" : "norton",
+        "img" : "massa.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 4,
+        "name" : "Hoja de lija",
+        "subR" : "madera",
+        "medida" : "100",
+        "costo" : 180,
+        "marc" : "norton",
+        "img" : "massa.png",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 5,
+        "name" : "Hoja de lija",
+        "subR" : "madera",
+        "medida" : "120",
+        "costo" : 180,
+        "marc" : "norton",
+        "img" : "massa.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 6,
+        "name" : "Hoja de lija",
+        "subR" : "madera",
+        "medida" : "150",
+        "costo" : 180,
+        "marc" : "norton",
+        "img" : "massa.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 7,
+        "name" : "Hoja de lija",
+        "subR" : "madera",
+        "medida" : "180",
+        "costo" : 180,
+        "marc" : "norton",
+        "img" : "massa.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 8,
+        "name" : "Hoja de lija",
+        "subR" : "metal",
+        "medida" : "40",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "lijaAgua.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 9,
+        "name" : "Hoja de lija",
+        "subR" : "metal",
+        "medida" : "60",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "lijaAgua.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 10,
+        "name" : "Hoja de lija",
+        "subR" : "metal",
+        "medida" : "80",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "lijaAgua.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 11,
+        "name" : "Hoja de lija",
+        "subR" : "metal",
+        "medida" : "100",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "lijaAgua.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 12,
+        "name" : "Hoja de lija",
+        "subR" : "metal",
+        "medida" : "120",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "lijaAgua.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 13,
+        "name" : "Hoja de lija",
+        "subR" : "metal",
+        "medida" : "150",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "lijaAgua.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 14,
+        "name" : "Hoja de lija",
+        "subR" : "metal",
+        "medida" : "180",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "lijaAgua.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 15,
+        "name" : "Hoja de lija",
+        "subR" : "tela esmeril",
+        "medida" : "40",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 16,
+        "name" : "Hoja de lija",
+        "subR" : "tela esmeril",
+        "medida" : "60",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 17,
+        "name" : "Hoja de lija",
+        "subR" : "tela esmeril",
+        "medida" : "80",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 18,
+        "name" : "Hoja de lija",
+        "subR" : "tela esmeril",
+        "medida" : "100",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 19,
+        "name" : "Hoja de lija",
+        "subR" : "tela esmeril",
+        "medida" : "120",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 20,
+        "name" : "Hoja de lija",
+        "subR" : "tela esmeril",
+        "medida" : "150",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 21,
+        "name" : "Hoja de lija",
+        "subR" : "tela esmeril",
+        "medida" : "180",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png"
+        
+    },
+    
+    {
+        "id" : 22,
+        "name" : "Hoja de lija",
+        "subR" : "antiempaste",
+        "medida" : "40",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 23,
+        "name" : "Hoja de lija",
+        "subR" : "antiempaste",
+        "medida" : "60",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 24,
+        "name" : "Hoja de lija",
+        "subR" : "antiempaste",
+        "medida" : "80",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 25,
+        "name" : "Hoja de lija",
+        "subR" : "antiempaste",
+        "medida" : "100",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 26,
+        "name" : "Hoja de lija",
+        "subR" : "antiempaste",
+        "medida" : "120",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 27,
+        "name" : "Hoja de lija",
+        "subR" : "antiempaste",
+        "medida" : "150",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 28,
+        "name" : "Hoja de lija",
+        "subR" : "antiempaste",
+        "medida" : "180",
+        "costo" : 290,
+        "marc" : "norton",
+        "img" : "esmeril.png",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 29,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "3/16 x 1",
+        "costo" : 5.3,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 30,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "3/16 x 1 1/4",
+        "costo" : 6,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 31,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "3/16 x 1 1/2",
+        "costo" : 6.5,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 32,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "3/16 x 1 3/4",
+        "costo" : 7,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 33,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "3/16 x 2",
+        "costo" : 7.5,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 34,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "3/16 x 2 1/4",
+        "costo" : 8,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 35,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "3/16 x 2 1/2",
+        "costo" : 8.5,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 36,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "3/16 x 3",
+        "costo" : 9,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 37,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "1/4 x 1",
+        "costo" : 10,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 38,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "1/4 x 1 1/4",
+        "costo" : 10.5,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 39,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "1/4 x 1 1/2",
+        "costo" : 11,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 40,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "1/4 x 1 3/4",
+        "costo" : 11.5,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 41,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "1/4 x 2",
+        "costo" : 12,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 42,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "1/4 x 2 1/4",
+        "costo" : 12.5,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 43,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "1/4 x 2 1/2",
+        "costo" : 13,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 44,
+        "name" : "Tornillo tirafondo",
+        "subR" : "tirafondo",
+        "medida" : "1/4 x 3",
+        "costo" : 13.5,
+        "marc" : "telfix",
+        "img" : "tornilloTiraf.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 45,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "6 x 5/8",
+        "costo" : 3,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 46,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "6 x 3/4",
+        "costo" : 3.5,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 47,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "6 x 1",
+        "costo" : 4,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 48,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "6 x 1 1/4",
+        "costo" : 4.5,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 49,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "6 x 1 1/2",
+        "costo" : 5,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 50,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "6 x 1 3/4",
+        "costo" : 5.5,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 51,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "6 x 2",
+        "costo" : 6,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 52,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "8 x 3/4",
+        "costo" : 3.5,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 53,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "8 x 1",
+        "costo" : 4,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 54,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "8 x 1 1/4",
+        "costo" : 4.5,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 55,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "8 x 1 1/2",
+        "costo" : 5,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 56,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "8 x 1 3/4",
+        "costo" : 5.5,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg"
+        
+    },
+
+    {
+        "id" : 57,
+        "name" : "Tornillo autoperforante p/madera",
+        "subR" : "madera",
+        "medida" : "8 x 2",
+        "costo" : 6,
+        "marc" : "mitofix",
+        "img" : "drywall.jpg"
+        
+    },
+
+    {
+        "id" : 58,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "3/16 x 1/2",
+        "costo" : 3,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 59,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "3/16 x 3/4",
+        "costo" : 3.5,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 60,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "3/16 x 1",
+        "costo" : 4,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 61,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "3/16 x 1 1/4",
+        "costo" : 4.5,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 62,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "3/16 x 1 1/2",
+        "costo" : 5,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 63,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "3/16 x 1 3/4",
+        "costo" : 5.5,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 64,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "3/16 x 2",
+        "costo" : 6,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 65,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "3/16 x 2 1/2",
+        "costo" : 6.5,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 66,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "3/16 x 3",
+        "costo" : 7,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+
+    
+    {
+        "id" : 67,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "1/4 x 1/2",
+        "costo" : 3,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 68,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "1/4 x 3/4",
+        "costo" : 3.5,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 69,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "1/4 x 1",
+        "costo" : 4,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 70,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "1/4 x 1 1/4",
+        "costo" : 4.5,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 71,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "1/4 x 1 1/2",
+        "costo" : 5,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 72,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "1/4 x 1 3/4",
+        "costo" : 5.5,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 73,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "1/4 x 2",
+        "costo" : 6,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 74,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "1/4 x 2 1/2",
+        "costo" : 6.5,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 75,
+        "name" : "Tornillo cabeza tanque",
+        "subR" : "tanque",
+        "medida" : "1/4 x 3",
+        "costo" : 7,
+        "marc" : "telfix",
+        "img" : "tornilloTanque.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 76,
+        "name" : "Disco de corte p/madera",
+        "subR" : "madera",
+        "medida" : "115",
+        "costo" : 350,
+        "marc" : "Rhein",
+        "img" : "discoCorteRhein.webp",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 77,
+        "name" : "Disco de corte p/madera",
+        "subR" : "madera",
+        "medida" : "180",
+        "costo" : 600,
+        "marc" : "Rhein",
+        "img" : "discoCorteRhein.webp",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 78,
+        "name" : "Disco de corte p/madera",
+        "subR" : "madera",
+        "medida" : "230",
+        "costo" : 900,
+        "marc" : "Rhein",
+        "img" : "discoCorteRhein.webp",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 79,
+        "name" : "Disco de corte p/hierro",
+        "subR" : "metal",
+        "medida" : "115",
+        "costo" : 350,
+        "marc" : "Norton",
+        "img" : "discoCorteNorton.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 80,
+        "name" : "Disco de corte p/hierro",
+        "subR" : "metal",
+        "medida" : "180",
+        "costo" : 600,
+        "marc" : "Norton",
+        "img" : "discoCorteNorton.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 81,
+        "name" : "Disco de corte p/hierro",
+        "subR" : "metal",
+        "medida" : "230",
+        "costo" : 900,
+        "marc" : "Norton",
+        "img" : "discoCorteNorton.jpg",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 82,
+        "name" : "Disco de corte p/chapa",
+        "subR" : "metal",
+        "medida" : "115",
+        "costo" : 350,
+        "marc" : "Norton",
+        "img" : "discoCorteNorton.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 83,
+        "name" : "Disco de corte p/chapa",
+        "subR" : "metal",
+        "medida" : "180",
+        "costo" : 600,
+        "marc" : "Norton",
+        "img" : "discoCorteNorton.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 84,
+        "name" : "Disco de corte p/chapa",
+        "subR" : "metal",
+        "medida" : "230",
+        "costo" : 900,
+        "marc" : "Norton",
+        "img" : "discoCorteNorton.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 85,
+        "name" : "Disco de corte p/hormigón",
+        "subR" : "mamposteria",
+        "medida" : "115",
+        "costo" : 1555,
+        "marc" : "Norton",
+        "img" : "discoSegNorton.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 86,
+        "name" : "Disco de corte p/hormigón",
+        "subR" : "mamposteria",
+        "medida" : "180",
+        "costo" : 600,
+        "marc" : "Norton",
+        "img" : "discoSegNorton.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 87,
+        "name" : "Disco de corte p/hormigón",
+        "subR" : "mamposteria",
+        "medida" : "230",
+        "costo" : 900,
+        "marc" : "Norton",
+        "img" : "discoSegNorton.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 88,
+        "name" : "Disco de corte p/cerámica",
+        "subR" : "mamposteria",
+        "medida" : "115",
+        "costo" : 350,
+        "marc" : "Norton",
+        "img" : "discoContNorton.webp",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 89,
+        "name" : "Disco de corte p/cerámica",
+        "subR" : "mamposteria",
+        "medida" : "180",
+        "costo" : 600,
+        "marc" : "Norton",
+        "img" : "discoContNorton.webp",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 90,
+        "name" : "Disco de corte p/cerámica",
+        "subR" : "mamposteria",
+        "medida" : "230",
+        "costo" : 900,
+        "marc" : "Norton",
+        "img" : "discoContNorton.webp",
+        "cantidad" : 1
+    },
+    
+    {
+        "id" : 91,
+        "name" : "Disco de corte",
+        "subR" : "metal",
+        "medida" : "115",
+        "costo" : 350,
+        "marc" : "tyrolit",
+        "img" : "discoCorteTy.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 89,
+        "name" : "Disco de corte",
+        "subR" : "mamposteria",
+        "medida" : "180",
+        "costo" : 600,
+        "marc" : "tyrolit",
+        "img" : "discoCorteTy.jpg",
+        "cantidad" : 1
+    },
+
+    {
+        "id" : 90,
+        "name" : "Disco de corte",
+        "subR" : "mamposteria",
+        "medida" : "230",
+        "costo" : 900,
+        "marc" : "tyrolit",
+        "img" : "discoCorteTy.jpg",
+        "cantidad" : 1
+    }
+]

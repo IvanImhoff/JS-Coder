@@ -49,6 +49,13 @@ a {
 .navbar .container-fluid {
   background-color: #fdd41a;
 }
+.navbar .container-fluid #crearCart {
+  display: flex;
+  gap: 15px;
+}
+.navbar .container-fluid #crearCart p {
+  margin: 0;
+}
 .navbar .container-fluid img {
   width: 35px;
   height: 35px;
@@ -168,6 +175,9 @@ main .fondo {
 .objetos_carro img {
   width: 40px;
   height: 40px;
+}
+.objetos_carro p button {
+  margin: 10px;
 }
 
 .boton_cart {

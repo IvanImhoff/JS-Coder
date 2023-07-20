@@ -34,7 +34,29 @@ let inputCity = document.querySelector(`#inputCity`)
 let inputProv = document.querySelector(`#inputState`)
 let inputZip = document.querySelector(`#inputZip`)
 let submit = document.querySelector(`#submit`)
+let cargando = document.querySelector(`#cargando`)
+
+// let totalNav = document.querySelector(`#totalNav`)
 // let deslog = document.querySelector(`#deslog`)
+
+cargarPorductos()
+
+setTimeout(()=>{
+    cargando.remove()
+    showArray(productos)
+},3000)
+
+const eventoFuturo = ()=>{
+    return new Promise ((resuelve, reject)=>{
+        setTimeout(()=>{
+            if(localStorage.getItem(`Usuario`)){
+                resuelve(console.log("resuelto"))
+            }else{
+                reject(console.log("no hay usuario"))
+            }
+        },10000)
+    })
+}
 
 // sweet alert
 const Toast = Swal.mixin({
@@ -49,8 +71,8 @@ const Toast = Swal.mixin({
         }
     })
 
-// Cargar todos los productos al DOM
-showArray(productos)
+    
+
 
 // Condicional para cargar el DOM - Usuario ingresa por primera vez, carga FORM - sino carga array productos
 if(localStorage.getItem(`Usuario`)){
@@ -83,12 +105,21 @@ if(localStorage.getItem(`Usuario`)){
     })
 }
 
-// ver si la KEY existe en storage
+// ver si la KEY existe en storage y cargar el carro de una u otra forma
 if(localStorage.getItem(`carro`)){
-    carro = JSON.parse(localStorage.getItem(`carro`))
+    // carro = JSON.parse(localStorage.getItem(`carro`))
+    for (let prod of JSON.parse(localStorage.getItem(`carro`))){
+        let cantidadStorge = prod.cantidad
+        let prodNuevo = new Productos (prod.id, prod.name, prod.subR, prod.medida, prod.costo, prod.marc, prod.img)
+        prodNuevo.cantidad = cantidadStorge
+        carro.push(prodNuevo)
+    }
+
     }else{
+        carro = []
         localStorage.setItem(`carro`, JSON.stringify(carro))
 }
+
 
 // No funciona correctamente - borrar datos del usuario
 let deslog = document.querySelector(`#deslog`)
@@ -117,13 +148,44 @@ function showCart(array){
         divCart.innerHTML += `
                             <div class="objetos_carro" id="productoCarrito${prod.id}">
                                 <img src="./../asset/${prod.img}" alt="">
-                                <p>${prod.id} - ${prod.name} ${prod.subR} ${prod.medida}  - Precio $${prod.costo} - Cantidad: ${prod.cant}</p>
+                                <p>${prod.id} - ${prod.name} ${prod.subR} ${prod.medida}  - Precio Unit. $${prod.costo} - Cantidad: <button class="btn btn-danger" id="botonRestar${prod.id}">-</button> ${prod.cantidad} <button class="btn btn-success" id="botonSumar${prod.id}">+</button> Subtotal $${prod.cantidad * prod.costo} </p>
                                 <button class="btn btn-danger" id="borrarItem${prod.id}"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
                                 <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
                                 </svg></button>
                             </div>
                             `
     })
+    // sumar cantidad en carro
+    array.forEach((prod) => {
+        document.querySelector(`#botonSumar${prod.id}`).addEventListener(`click`, ()=>{
+            prod.sumarCantidad()
+            localStorage.setItem(`carro`, JSON.stringify(array))
+            showCart(array)
+            calcularTotal(array)
+        })
+
+        document.querySelector(`#botonRestar${prod.id}`).addEventListener(`click`, () => {
+            let cantProd = prod.restarCantidad()
+
+            if(cantProd < 1){
+                let cardProd = document.querySelector(`#productoCarrito${prod.id}`)
+                cardProd.remove()
+
+                let productoEliminar = array.find((producto) => producto.id == prod.id)
+                console.log(productoEliminar)
+
+                let posicion = array.indexOf(productoEliminar)
+                array.splice(posicion,1)
+                localStorage.setItem(`carro`, JSON.stringify(array))
+
+                calcularTotal(array)
+            }else{
+                localStorage.setItem(`carro`, JSON.stringify(array))
+            }
+            showCart(array)
+        })
+    })
+
     // eliminar prod de carrito
     array.forEach((prod) => {
         document.querySelector(`#borrarItem${prod.id}`).addEventListener(`click`,() => {
@@ -146,7 +208,9 @@ function showCart(array){
         } )
     })
 
-    calcularTotal(carro)
+    
+
+    calcularTotal(array)
 }
 
 // Crear seccion articulos
@@ -155,7 +219,7 @@ function showArray(array){
     for (let art of array) {
         let nuevoArtDiv = document.createElement(`div`)
         nuevoArtDiv.className = "container-ferre col"
-        nuevoArtDiv.innerHTML = `<div id=${art.id} class="cardo" style="width: 18rem;">
+        nuevoArtDiv.innerHTML = `<div id=${art.id} class="cardo" style="width: 15rem;">
                                     <img src="./../asset/${art.img}" alt="">
                                     <div>
                                         <h2>${art.name}</h2>
@@ -170,6 +234,7 @@ function showArray(array){
     let agregarBtn = document.querySelector(`.btn-agregar${art.id}`)
     agregarBtn.addEventListener(`click`,()=>{
         agregarAlCarrito(art)
+        calcularTotal(carro)
     })
     }
     
@@ -195,8 +260,13 @@ function agregarAlCarrito(producto){
 }
 
 function calcularTotal(array){
-    let total = array.reduce((acc,productoCarrito) => acc + productoCarrito.costo, 0)
+    let total = array.reduce((acc,prod) => acc + (prod.costo * prod.cantidad), 0)
     total == 0 ? totalCarro.innerHTML = `<h2>Su carro esta vacio</h2>` : totalCarro.innerHTML = `<h2>Tolal: $${total}</h2>`
+    // agregar al nav total carrito
+    mostrarCarro.innerHTML = `<p>$${total}</p>
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>`
 }
 
 // Eventos

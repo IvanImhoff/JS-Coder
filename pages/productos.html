@@ -42,7 +42,7 @@
                         </ul>
                         
                     </div>
-                    <button class="boton_cart" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="crearCart"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="crearCart"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                     </svg></button>
                     
@@ -111,7 +111,7 @@
         </div>
         <!-- MODAL CARRO-->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="staticBackdropLabel">Productos en tu carrito</h1>
@@ -125,7 +125,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Finalizar compra</button>
+                        <button type="button" class="btn btn-success">Finalizar compra</button>
                         <button type="button" class="btn btn-danger" id="vaciarCarro">Vaciar carrito</button>
                     </div>
                 </div>
@@ -199,18 +199,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                            Arandelas
-                            </button>
-                        </h2>
-                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <strong>En construccion</strong>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -218,7 +206,10 @@
         <!-- RIGHT section -->
         <section class="container right">
             <div id="articulos" class="row">
-                
+                <button class="btn btn-primary" id="cargando" type="button" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Cargando articulos...
+                </button>
             </div>
         </section>
         <div class="scroll_container">
