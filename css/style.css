@@ -139,7 +139,67 @@ footer svg {
   width: 50%;
 }
 
-main {
+.mainIndex {
+  gap: 50px;
+  overflow: hidden;
+  font-family: "Cocomat";
+}
+.mainIndex .carousel {
+  height: 90vh;
+}
+.mainIndex .carousel .carousel-item {
+  height: 90vh;
+}
+.mainIndex .carousel .carousel-item .carousel-caption {
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+  box-shadow: #191919;
+}
+.mainIndex .carousel .carousel-item h5 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.mainIndex .carousel .carousel-item h5 a {
+  all: unset;
+}
+.mainIndex .carousel .carousel-item h5 a:hover {
+  color: #191919;
+  cursor: pointer;
+}
+.mainIndex .carousel .carousel-item p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.mainIndex .carousel .sanitario h5 {
+  color: #191919;
+}
+.mainIndex .carousel .sanitario p {
+  color: #191919;
+}
+.mainIndex .carousel .hogar h5 {
+  color: #191919;
+}
+.mainIndex .carousel .hogar p {
+  color: #191919;
+}
+.mainIndex .fondo {
+  width: 600px;
+  height: 600px;
+  border-radius: 5px;
+  position: absolute;
+  right: 10vw;
+  top: 25vh;
+}
+.mainIndex ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 25px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.mainProductos {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -149,14 +209,6 @@ main {
   background-size: cover;
   background-attachment: fixed;
   height: auto;
-}
-main .fondo {
-  width: 600px;
-  height: 600px;
-  border-radius: 5px;
-  position: absolute;
-  right: 10vw;
-  top: 25vh;
 }
 
 .objetos_carro {
@@ -234,6 +286,10 @@ main .container-ferre .cardo img {
   border-bottom: 1px solid #191919;
   object-fit: contain;
   background-color: #fff;
+  filter: blur(0.5px);
+}
+main .container-ferre .cardo img:hover {
+  filter: blur(0);
 }
 main .container-ferre .cardo h2 {
   font-weight: 600px;
@@ -290,11 +346,21 @@ main #totalCarro h2 {
 main .offcanvas {
   width: 10vw;
 }
+main .offcanvas .offcanvas-header {
+  background-image: linear-gradient(135deg, #fdd41a, #fdd41a, black);
+}
+main .offcanvas .offcanvas-header .btn-close {
+  color: #eee;
+}
 main .offcanvas .offcanvas-body {
   width: 100%;
+  background-image: linear-gradient(135deg, rgb(126, 117, 117), black);
 }
 main .offcanvas .offcanvas-body #filtros {
   margin-top: 2vh;
+}
+main .offcanvas a:hover {
+  background-color: rgba(253, 211, 26, 0.5137254902);
 }
 main #button_prod {
   height: 50px;
@@ -362,6 +428,10 @@ main .scroll_container::before {
   --bs-accordion-active-bg: yellow;
 }
 
+.accordion-button:not(.collapsed) {
+  background-color: rgba(255, 208, 0, 0.603);
+}
+
 .accordion-button {
   position: relative;
   background-color: #fff;
@@ -373,18 +443,70 @@ main .scroll_container::before {
   box-shadow: none;
 }
 .accordion-button:active {
-  background-color: red;
+  background-color: #fdd41a;
+}
+.accordion-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background-color: rgb(255, 0, 64);
+  transition: 0.5s all ease-in-out;
+}
+.accordion-button::before {
+  background-color: #fdd41a;
+}
+.accordion-button:hover::before {
+  border-radius: 0 50px 50px 0;
+  width: 110%;
+  z-index: -1;
+}
+.accordion-button:focus {
+  background: none;
+  box-shadow: none;
+}
+.accordion-button a {
+  display: block;
+  padding: 10px 20px;
+  color: #191919;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 992px) {
   .boton_cart {
     margin: 8px 0;
   }
+  #crearCart {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
   main #button_prod {
-    top: 40vh;
+    top: 60vh;
+    writing-mode: horizontal-tb;
   }
   #infoCliente {
     margin: 10px 0 0 0;
+  }
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .modal-body .objetos_carro {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.75);
   }
 }
 

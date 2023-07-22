@@ -1,4 +1,19 @@
 // *{overflow: hidden;}
+
+.mainProductos{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.521),rgba(253, 253, 253, 0.466)), url(./../multimeia/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: auto;
+
+    
+}
+
 .objetos_carro{
     margin: 10px 0;
     padding: 5px;
@@ -86,6 +101,11 @@ main{
                 border-bottom: 1px solid #191919;
                 object-fit: contain;
                 background-color: #fff;
+                filter: blur(0.5px);
+                &:hover{
+                    filter: blur(0);
+                }
+
             }
             h2 {
                 font-weight: 600px;
@@ -152,13 +172,24 @@ main{
     
     .offcanvas{
         width: 10vw;
+        .offcanvas-header{
+            background-image: linear-gradient(135deg,$colorAma,$colorAma, black);
+            .btn-close{
+                color: #eee;
+            }
+        }
         .offcanvas-body{
             width: 100%;
+            background-image: linear-gradient(135deg, rgb(126, 117, 117), black);
             #filtros{
                 margin-top: 2vh;
             }
         }
-    
+        a{
+            &:hover{
+                background-color: #fdd31a83;
+            }
+        }
     }
     #button_prod{
         height: 50px;
@@ -231,50 +262,58 @@ main{
     background-color: yellow;
     --bs-accordion-active-bg: yellow;
 }
+
+.accordion-button:not(.collapsed) {
+    background-color: rgba(255, 208, 0, 0.603);
+}
 .accordion-button {
     position: relative;
     background-color: #fff;
     border-radius: 2px;
     overflow: hidden;
     margin: 0;
+    
     &:focus{
     box-shadow: none;
+    
     }
 
     &:active{
-        background-color: red;
-    }
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: 0;
-    //     bottom: 0;
-    //     width: 5px;
-    //     background-color: rgb(255, 0, 64);
-    //     transition: 0.5s all ease-in-out;
-    // }
-    // &::before{
-    //     background-color: $colorAma;
-    // }
-    // &:hover::before {
-    //     border-radius: 0 50px 50px 0;
-    //     width: 110%;
-    //     z-index: -1;
-    // }
-
-    // &:focus {
-    //     background: none;
-    //     box-shadow: none;
-    // }
-    // a {
-    //     display: block;
-    //     padding: 10px 20px;
-    //     color: #191919;
-    //     text-decoration: none;
-    //     font-weight: bold;
-    //     font-size: 18px;
-    //     position: relative;
-    //     z-index: 1;
+        background-color: $colorAma;
         
-    // }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 5px;
+        background-color: rgb(255, 0, 64);
+        transition: 0.5s all ease-in-out;
+    }
+    &::before{
+        background-color: $colorAma;
+    }
+    &:hover::before {
+        border-radius: 0 50px 50px 0;
+        width: 110%;
+        z-index: -1;
+    }
+
+    &:focus {
+        background: none;
+        box-shadow: none;
+    }
+    a {
+        display: block;
+        padding: 10px 20px;
+        color: #191919;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 18px;
+        position: relative;
+        z-index: 1;
+        
+    }
 }

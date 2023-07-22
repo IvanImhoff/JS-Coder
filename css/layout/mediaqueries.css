@@ -2,11 +2,31 @@
   .boton_cart {
     margin: 8px 0;
   }
+  #crearCart {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
   main #button_prod {
-    top: 40vh;
+    top: 60vh;
+    writing-mode: horizontal-tb;
   }
   #infoCliente {
     margin: 10px 0 0 0;
+  }
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .modal-body .objetos_carro {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.75);
   }
 }
 

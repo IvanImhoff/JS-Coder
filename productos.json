@@ -1004,7 +1004,7 @@
     {
         "id" : 89,
         "name" : "Disco de corte",
-        "subR" : "mamposteria",
+        "subR" : "metal",
         "medida" : "180",
         "costo" : 600,
         "marc" : "tyrolit",
@@ -1015,7 +1015,7 @@
     {
         "id" : 90,
         "name" : "Disco de corte",
-        "subR" : "mamposteria",
+        "subR" : "metal",
         "medida" : "230",
         "costo" : 900,
         "marc" : "tyrolit",

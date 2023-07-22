@@ -1,4 +1,5 @@
-// En el DOM se carga por defecto todo el catalogo de productos. En el buscador va filtrando por cada input del usuario (la busqueda se realiza en todos los atributos de los objetos, en el array PRODUCTOS). En los elementos del acordeon filtra y muestra en el DOM según indica el rubro. En el NAV, en la opción Registrarse, se guardan los datos del usuario ingresado por input, actualiza un fragmento del DOM con sus datos. (Aún no logré que funcione correctamente el evento en el botón desloguear). En el storage se guarda el carrito, los datos del usuario.
+//El index es solo estilos
+//Html productos: En el DOM se carga por defecto todo el catalogo de productos. En el buscador va filtrando por cada input del usuario (la busqueda se realiza en todos los atributos de los objetos, en el array PRODUCTOS). En los elementos del acordeon filtra y muestra en el DOM según indica el rubro. En el NAV, en la opción Registrarse, se guardan los datos del usuario ingresado por input, actualiza un fragmento del DOM con sus datos. En el storage se guarda el carrito y los datos del usuario.
 
 // Capt
 let divCart = document.querySelector(`#carro`)
@@ -35,9 +36,7 @@ let inputProv = document.querySelector(`#inputState`)
 let inputZip = document.querySelector(`#inputZip`)
 let submit = document.querySelector(`#submit`)
 let cargando = document.querySelector(`#cargando`)
-
-// let totalNav = document.querySelector(`#totalNav`)
-// let deslog = document.querySelector(`#deslog`)
+let finalizarCompra = document.querySelector(`#finalizarCompra`)
 
 cargarPorductos()
 
@@ -45,18 +44,6 @@ setTimeout(()=>{
     cargando.remove()
     showArray(productos)
 },3000)
-
-const eventoFuturo = ()=>{
-    return new Promise ((resuelve, reject)=>{
-        setTimeout(()=>{
-            if(localStorage.getItem(`Usuario`)){
-                resuelve(console.log("resuelto"))
-            }else{
-                reject(console.log("no hay usuario"))
-            }
-        },10000)
-    })
-}
 
 // sweet alert
 const Toast = Swal.mixin({
@@ -70,9 +57,6 @@ const Toast = Swal.mixin({
         toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
     })
-
-    
-
 
 // Condicional para cargar el DOM - Usuario ingresa por primera vez, carga FORM - sino carga array productos
 if(localStorage.getItem(`Usuario`)){
@@ -103,6 +87,7 @@ if(localStorage.getItem(`Usuario`)){
         localStorage.setItem(`Usuario`,JSON.stringify(nuevoUsuario))
         
     })
+    
 }
 
 // ver si la KEY existe en storage y cargar el carro de una u otra forma
@@ -114,20 +99,17 @@ if(localStorage.getItem(`carro`)){
         prodNuevo.cantidad = cantidadStorge
         carro.push(prodNuevo)
     }
-
     }else{
         carro = []
         localStorage.setItem(`carro`, JSON.stringify(carro))
 }
 
-
-// No funciona correctamente - borrar datos del usuario
+// No funciona correctamente - hay que actualizar para que funcione el evento.
 let deslog = document.querySelector(`#deslog`)
-    deslog.addEventListener(`click`, () => {
-    
-    localStorage.removeItem(`Usuario`)
-    })
-
+deslog.addEventListener(`click`, () => {
+    location.href = "../index.html"
+localStorage.removeItem(`Usuario`)
+})
 
 // Input buscador
 function buscarInfo(buscado, array){
@@ -136,7 +118,6 @@ function buscarInfo(buscado, array){
     )
     busqueda.length == 0 ? (articulosDiv.innerHTML = `<h2>No se han encontrado coincidencias con ${buscado}`) : (articulosDiv.innerHTML = ``, showArray(busqueda))
 }
-
 
 // FUNCIONES
 
@@ -205,11 +186,8 @@ function showCart(array){
                 title: 'Has eliminado el producto del carrito.'
             })
             calcularTotal(array)
-        } )
+        })
     })
-
-    
-
     calcularTotal(array)
 }
 
@@ -237,7 +215,6 @@ function showArray(array){
         calcularTotal(carro)
     })
     }
-    
 }
 
 function agregarAlCarrito(producto){
@@ -246,7 +223,6 @@ function agregarAlCarrito(producto){
     if(nuevoProd == undefined){
         carro.push(producto)
         localStorage.setItem(`carro`, JSON.stringify(carro))
-        console.log(carro)
         Toast.fire({
             icon: 'success',
             title: 'Agregado al carrito!'
@@ -267,6 +243,42 @@ function calcularTotal(array){
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                     </svg>`
+                    return total
+}
+
+function terminarCompra(array){
+    Swal.fire({
+        title: 'Está seguro de realizar la compra',
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, seguro',
+        cancelButtonText: 'No, no quiero',
+        confirmButtonColor: 'green',
+        cancelButtonColor: 'red'
+    }).then((resultado)=>{
+        if(resultado.isConfirmed){
+            let totalFinal = calcularTotal(array)
+            Swal.fire({
+                title: 'Compra realizada',
+                icon: 'success',
+                confirmButtonColor: 'green',
+                text: `Muchas gracias por su compra. Debe pagar ${totalFinal}.`
+            })
+            mostrarCarro.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </svg>`
+            carro = []
+            localStorage.removeItem(`carro`)
+        }else{
+            Swal.fire({
+                title: 'Compra cancelada',
+                icon: 'info',
+                text: `La compra no ha sido realizada! Atención sus productos siguen en el carrito`,
+                confirmButtonColor: 'green',
+                timer:3000
+            })
+        }
+    })
 }
 
 // Eventos
@@ -284,7 +296,6 @@ vaciarCarro.addEventListener(`click`, ()=>{
 mostrarCarro.addEventListener(`click`,()=>{
     showCart(carro)
 })
-
 
 // Menues tornillos
 
@@ -313,7 +324,6 @@ menuAutop.addEventListener(`click`,(e)=>{
     e.preventDefault()
     showArray(busqueda)
 })
-
 
 menuTorniTanque.addEventListener(`click`,(e)=>{
     let busqueda = productos.filter(
@@ -398,4 +408,8 @@ menuDiscosMampos.addEventListener("click", (e) => {
     )
     e.preventDefault()
     showArray(busqueda)
+})
+
+finalizarCompra.addEventListener(`click`, ()=>{
+    terminarCompra(carro)
 })

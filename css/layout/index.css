@@ -1,21 +1,61 @@
-main {
-  display: flex;
-  flex-direction: column;
+.mainIndex {
   gap: 50px;
   overflow: hidden;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.521), rgba(253, 253, 253, 0.466)), url(./../multimeia/fondo2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: auto;
+  font-family: "Cocomat";
 }
-main .fondo {
+.mainIndex .carousel {
+  height: 90vh;
+}
+.mainIndex .carousel .carousel-item {
+  height: 90vh;
+}
+.mainIndex .carousel .carousel-item .carousel-caption {
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+  box-shadow: #191919;
+}
+.mainIndex .carousel .carousel-item h5 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.mainIndex .carousel .carousel-item h5 a {
+  all: unset;
+}
+.mainIndex .carousel .carousel-item h5 a:hover {
+  color: #191919;
+  cursor: pointer;
+}
+.mainIndex .carousel .carousel-item p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.mainIndex .carousel .sanitario h5 {
+  color: #191919;
+}
+.mainIndex .carousel .sanitario p {
+  color: #191919;
+}
+.mainIndex .carousel .hogar h5 {
+  color: #191919;
+}
+.mainIndex .carousel .hogar p {
+  color: #191919;
+}
+.mainIndex .fondo {
   width: 600px;
   height: 600px;
   border-radius: 5px;
   position: absolute;
   right: 10vw;
   top: 25vh;
+}
+.mainIndex ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 25px;
+  margin-bottom: 50px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=index.css.map */
