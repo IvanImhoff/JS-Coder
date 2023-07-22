@@ -41,7 +41,7 @@ let finalizarCompra = document.querySelector(`#finalizarCompra`)
 cargarPorductos()
 
 setTimeout(()=>{
-    cargando.remove()
+    
     showArray(productos)
 },3000)
 
