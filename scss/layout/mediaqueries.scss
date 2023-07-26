@@ -15,13 +15,7 @@
     #infoCliente{
         margin: 10px 0 0 0;
     }    
-    // #navbarSupportedContent{
-    //     display: flex;
-    //     // gap: 50px;
-    // }
-    // #infoCliente{
-    //     margin: 0;
-    // }
+    
     .modal-body{
         display: flex;
         flex-direction: column;
@@ -40,27 +34,13 @@
     
 }
 
-@media only screen and (max-width: 768px){
-    .carousel-caption{
-        // background-color: red;
-        .subti{
-            font-size: 25px;
-        }
-        .parrafo{
-            font-size: 16px;
-        }
-    }
-    
-}
 
-@media only screen and (max-width: 400px){
-    .carousel-caption{
-        // background-color: blue;
-        .subti{
-            font-size: 20px;
-        }
-        .parrafo{
-            font-size: 16px;
+@media only screen and (max-width: 768px){
+    .container-ferre{
+        width: 240px;
+        .cardo{
+            width: 10rem;
+            margin-right: 2px;
         }
     }
 }

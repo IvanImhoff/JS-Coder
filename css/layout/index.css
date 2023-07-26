@@ -6,6 +6,9 @@
 .mainIndex .carousel {
   height: 90vh;
 }
+.mainIndex .carousel #imgElec {
+  background-image: url(./multimeia/imgs/electricidad.jpg);
+}
 .mainIndex .carousel .carousel-item {
   height: 90vh;
 }

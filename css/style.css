@@ -147,6 +147,9 @@ footer svg {
 .mainIndex .carousel {
   height: 90vh;
 }
+.mainIndex .carousel #imgElec {
+  background-image: url(./multimeia/imgs/electricidad.jpg);
+}
 .mainIndex .carousel .carousel-item {
   height: 90vh;
 }
@@ -514,19 +517,12 @@ main .scroll_container::before {
   }
 }
 @media only screen and (max-width: 768px) {
-  .carousel-caption .subti {
-    font-size: 25px;
+  .container-ferre {
+    width: 240px;
   }
-  .carousel-caption .parrafo {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .carousel-caption .subti {
-    font-size: 20px;
-  }
-  .carousel-caption .parrafo {
-    font-size: 16px;
+  .container-ferre .cardo {
+    width: 10rem;
+    margin-right: 2px;
   }
 }
 
