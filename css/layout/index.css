@@ -9,6 +9,10 @@
 .mainIndex .carousel .carousel-item {
   height: 90vh;
 }
+.mainIndex .carousel .carousel-item img {
+  min-height: 90vh;
+  object-fit: cover;
+}
 .mainIndex .carousel .carousel-item .carousel-caption {
   backdrop-filter: blur(5px);
   border-radius: 50px;

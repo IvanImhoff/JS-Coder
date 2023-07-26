@@ -40,6 +40,27 @@
     
 }
 
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 768px){
+    .carousel-caption{
+        // background-color: red;
+        .subti{
+            font-size: 25px;
+        }
+        .parrafo{
+            font-size: 16px;
+        }
+    }
     
+}
+
+@media only screen and (max-width: 400px){
+    .carousel-caption{
+        // background-color: blue;
+        .subti{
+            font-size: 20px;
+        }
+        .parrafo{
+            font-size: 16px;
+        }
+    }
 }
